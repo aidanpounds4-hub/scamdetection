@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PauseFirst — Scam Check</title>
+  <meta name="description" content="Paste a suspicious message, email, or call transcript. PauseFirst helps you slow down and spot scams before you act." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true">⏸</span>
+        <span class="brand-name">PauseFirst</span>
+      </a>
+      <p class="tagline">Slow down. Check. Then decide.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1>Is this a scam?</h1>
+      <p>
+        Scammers work by creating pressure so you act before you think.
+        Paste the message, email, or a note about the call below and
+        PauseFirst will point out the warning signs.
+      </p>
+    </section>
+
+    <section class="composer" aria-label="Message to check">
+      <label for="msg" class="field-label">Message, email, or call notes</label>
+      <textarea
+        id="msg"
+        rows="8"
+        placeholder="e.g. &quot;URGENT: Your account will be suspended. Verify now at http://secure-login-verify.example and confirm your password and one-time code.&quot;"
+        autocomplete="off"
+        spellcheck="false"></textarea>
+
+      <div class="controls">
+        <div class="channel">
+          <label for="channel">How did it reach you?</label>
+          <select id="channel">
+            <option value="text">Text / SMS</option>
+            <option value="email">Email</option>
+            <option value="call">Phone call</option>
+            <option value="social">Social media / DM</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="buttons">
+          <button id="checkBtn" class="primary" type="button">Check it</button>
+          <button id="clearBtn" class="ghost" type="button">Clear</button>
+        </div>
+      </div>
+
+      <details class="examples">
+        <summary>Try an example</summary>
+        <div class="example-buttons" id="exampleButtons"></div>
+      </details>
+    </section>
+
+    <section id="result" class="result" aria-live="polite" hidden></section>
+
+    <section class="safety">
+      <h2>If in doubt, pause and verify</h2>
+      <ul>
+        <li>Don't click links or call numbers <em>from the message</em>. Look up the real number yourself.</li>
+        <li>No legitimate organization asks for your password, full card number, or one-time code.</li>
+        <li>Urgency and secrecy are pressure tactics. Real institutions let you take your time.</li>
+        <li>Talk to someone you trust before sending money, gift cards, or crypto.</li>
+      </ul>
+      <p class="note">
+        PauseFirst runs entirely in your browser. Nothing you paste is sent anywhere.
+        It offers guidance, not a guarantee — when unsure, treat it as suspicious.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>PauseFirst · A private, in-browser scam check. Not affiliated with any bank, agency, or company.</p>
+    </div>
+  </footer>
+
+  <script src="detector.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
